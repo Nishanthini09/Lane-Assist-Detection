@@ -7,13 +7,13 @@ VIDEOS_FOLDER = "videos"
 video_path = os.path.join(VIDEOS_FOLDER, "test1.mp4")
 
 if not os.path.exists(video_path):
-    print(f"❌ Error: The file '{video_path}' does not exist.")
+    print(f"Error: The file '{video_path}' does not exist.")
     exit()
 
 video = cv2.VideoCapture(video_path)
 
 if not video.isOpened():
-    print("❌ Error: Could not open video.")
+    print("Error: Could not open video.")
     exit()
 
 # Store past lane positions for smoothing
